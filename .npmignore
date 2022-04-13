@@ -1,0 +1,10 @@
+/.github
+/examples
+/src
+/test
+.eslintrc.js
+.gitignore
+.npmignore
+.npmrc
+tsconfig.json
+vitest.config.ts
