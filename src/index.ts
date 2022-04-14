@@ -1,3 +1,1 @@
-export function main() {
-  console.log("Hello, World");
-}
+export * from "./server";
