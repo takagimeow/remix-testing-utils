@@ -1,0 +1,41 @@
+name: Bump version
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Semver type of new version (major / minor / patch)'
+        required: true
+
+jobs:
+  bump-version:
+    name: Bump version
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+        with:
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "lts/*"
+          cache: 'npm'
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+
+      - name: 🛠 Setup Git
+        run: |
+          git config user.name 'Keisuke Takagi'
+          git config user.email 'mit@takagi.app'
+
+      - name: 🆙 bump version
+        run: npm version ${{ github.event.inputs.version }}
+
+      - name: 📈 Push latest version
+        run: git push origin main --follow-tags
