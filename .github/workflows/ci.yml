@@ -72,7 +72,7 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: ⚡ Run vitest
-        run: npm run test -- --ci --coverage --maxWorkers=2
+        run: npm run test --ci --coverage --maxWorkers=2
 
   build:
     name: 🐳 Build
