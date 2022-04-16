@@ -1,0 +1,38 @@
+{
+  "name": "remix-template-remix",
+  "private": true,
+  "description": "",
+  "license": "",
+  "sideEffects": false,
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix dev",
+    "start": "remix-serve build",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@remix-run/node": "^1.4.0",
+    "@remix-run/react": "^1.4.0",
+    "@remix-run/serve": "^1.4.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.4.0",
+    "@remix-run/eslint-config": "^1.4.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.1.1",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "@vitejs/plugin-react": "^1.3.1",
+    "eslint": "^8.11.0",
+    "remix-testing-utils": "file:../..",
+    "typescript": "^4.5.5",
+    "vite": "^2.9.5",
+    "vite-tsconfig-paths": "^3.4.1",
+    "vitest": "^0.9.3"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
