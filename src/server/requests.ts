@@ -1,7 +1,7 @@
 export function createLoaderRequest(
   to: string,
   headers?: {
-    [key: string]: any;
+    [key: string]: string;
   }
 ) {
   const url = new URL(to);
