@@ -1,6 +1,6 @@
 {
   "name": "remix-testing-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A set of utility functions and types to make testing in Remix easier",
   "browser": "./browser/index.js",
   "main": "./build/index.js",
